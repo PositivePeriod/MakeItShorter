@@ -27,6 +27,7 @@ export class App {
 
     async updateStage() {
         var content = await this.stage.content();
+        document.getElementById("stage").innerText = `function stage${this.stage.stageID}() {`
         document.getElementById("dataElem").innerText = `Data: ${content.data}`;
         document.getElementById("dataLen").innerText = `Data Length: ${content.data.length}`;
         document.getElementById("code").value = '';
